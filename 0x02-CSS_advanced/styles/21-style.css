@@ -290,6 +290,11 @@ ul.row {
   padding: 0.5rem;
 }
 
+[class^='col-'] {
+  float: left;
+  padding: 0.5rem;
+}
+
 .footer {
   padding: var(--footer-padding);
 }
@@ -308,11 +313,6 @@ ul.row {
   content: '';
   display: table;
   clear: both;
-}
-
-[class*='col-']:not(.col-1-3, .col-1-2) {
-  float: left;
-  padding: 0.5rem;
 }
 
 :root {
