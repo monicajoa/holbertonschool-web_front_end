@@ -1,0 +1,8 @@
+/*  File that assigns the text color using a Sass variable*/
+$variable-color: #3d3d3d;
+body {
+  color: $variable-color;
+}
+p {
+  color: $variable-color;
+}
