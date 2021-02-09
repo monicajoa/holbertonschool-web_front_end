@@ -1,0 +1,8 @@
+/* Columns and operators */
+$columns: 4;
+
+@for $index from 1 through $columns {
+  .columns-#{$index} {
+    width: (100% / $index);
+  }
+}
