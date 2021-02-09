@@ -1,0 +1,10 @@
+/* Nested hover */
+$text-color-pre: #ff0000;
+$text-color-post: #00ff00;
+
+button {
+  color: $text-color-pre;
+  &:hover {
+    color: $text-color-post;
+  }
+}
