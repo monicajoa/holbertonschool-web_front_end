@@ -58,14 +58,13 @@
                 <a href="#contact" class="nav-link">Contact</a>
               </li>
               <li class="nav-item">
-                <form action="#" method="post" class="form-search">
+                <form action="#" method="POST" class="form-search">
                   <input
                     type="search"
                     name="q"
                     id="search-input"
                     placeholder="Search..."
-                    aria-label="Search through site
-		  content"
+                    aria-label="Search through site content"
                   />
                   <button class="search-button">
                     <svg
@@ -266,7 +265,7 @@
               <h2 class="section-title">Leave a comment</h2>
               <p>All fields are required.</p>
             </header>
-            <form action="#" method="post">
+            <form action="#" method="POST">
               <fieldset>
                 <legend class="visually-hidden">
                   Your personal information
@@ -284,7 +283,7 @@
                         maxlength="35"
                         autocomplete="on"
                         accesskey="f"
-                        required="true"
+                        required
                       />
                       <i class="form-field-icon"></i>
                     </span>
@@ -307,7 +306,7 @@
                         maxlength="40"
                         autocomplete="on"
                         accesskey="l"
-                        required="true"
+                        required
                       />
                       <i class="form-field-icon"></i>
                     </span>
@@ -330,7 +329,7 @@
                         maxlength="55"
                         autocomplete="on"
                         accesskey="e"
-                        required="true"
+                        required
                       />
                       <i class="form-field-icon"></i>
                     </span>
@@ -352,7 +351,7 @@
                         maxlength="75"
                         autocomplete="on"
                         accesskey="t"
-                        required="true"
+                        required
                       />
                       <i class="form-field-icon"></i>
                     </span>
@@ -372,11 +371,10 @@
                         placeholder="Write your comment here"
                         minlength="10"
                         accesskey="c"
-                        required="true"
+                        required
                         cols="30"
                         rows="6"
                       ></textarea>
-                      <i class="form-field-icon"></i>
                     </span>
                     <p class="form-help">
                       Comment should be at least 10 characters
