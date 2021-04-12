@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  </head>
+  <div id="login-form">
+    <h2>Login to the website</h2>
+    <input type="text" id="firstname" placeholder="Firstname" />
+    <input type="text" id="email" placeholder="Email" />
+    <button onclick="setCookiesAndShowWelcomeMessage()">Log me in</button>
+  </div>
+  <script>
+    let firstname = document.querySelector("#firstname").value;
+    let email = document.querySelector("#email").value;
+
+    function showForm() {
+      let msg = document.querySelector("#welcomeId");
+      if (msg) {
+        msg.remove();
+      }
+      document.querySelector("#login-form").style.display = "block";
+    }
+
+    function hideForm() {
+      document.querySelector("#login-form").style.display = "none";
+    }
+
+    function deleteCookiesAndShowForm() {
+      Cookies.remove("firstname", { path: "" });
+      Cookies.remove("email", { path: "" });
+      showForm();
+    }
+
+    function showWelcomeMessageOrForm() {
+      if (Cookies.get("firstname") == "" && Cookies.get("email") == "") {
+        showForm();
+      } else {
+        let welcome = document.createElement("div");
+        welcome.setAttribute("id", "welcomeId");
+        let fname = Cookies.get("firstname");
+        welcome.innerHTML = `<h1>Welcome ${fname}. <a onclick=deleteCookiesAndShowForm() style="font-weight: normal; font-style: italic; margin-left: 10px;">(logout)</a></h1>`;
+        document.querySelector("body").appendChild(welcome);
+        hideForm();
+      }
+    }
+
+    function setCookiesAndShowWelcomeMessage() {
+      Cookies.set("firstname", `${firstname}`, { expires: 10 });
+      Cookies.set("email", `${email}`, { expires: 10 });
+      showWelcomeMessageOrForm();
+    }
+
+    showWelcomeMessageOrForm();
+  </script>
+</html>
