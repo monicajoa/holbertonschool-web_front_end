@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" placeholder="Firstname" />
+    <input type="text" id="email" placeholder="Email" />
+    <button onclick="setCookies()">Log me in</button>
+    <br />
+    <h1>Cookies:</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+    <script>
+      function setCookies() {
+        let firstname = document.querySelector("#firstname").value;
+        let email = document.querySelector("#email").value;
+        document.cookie = `firstname=${firstname}`;
+        document.cookie = `email=${email}`;
+        let daysExpire = 10;
+        let today = new Date();
+        let expire = new Date();
+        expire.setTime(today.getTime() + 3600000 * 24 * daysExpire);
+        console.log(expire); //Show the date of expiration
+      }
+
+      function showCookies() {
+        let cookies = document.cookie;
+        let parag = document.createElement("p");
+        parag.innerHTML = `Email: ${getCookie(
+          "email"
+        )} - Firstname: ${getCookie("firstname")}`;
+        document.querySelector("body").appendChild(parag);
+      }
+
+      function getCookie(name) {
+        let cookieName = document.cookie.split("; ");
+        for (let i = 0; i < cookieName.length; i++) {
+          let cookieValue = cookieName[i].split("=");
+          if (name === cookieValue[0]) {
+            return cookieValue[1];
+          }
+        }
+        return "";
+      }
+    </script>
+  </body>
+</html>
