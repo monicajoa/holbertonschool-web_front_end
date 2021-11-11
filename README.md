@@ -20,7 +20,7 @@ CSS works by:
 ## Projects
 
 Here you can find front-end technologies projects:
-- [0x00. Advanced HTML](https://github.com/monicajoa/holbertonschool-web_front_end/tree/master/0x00-html_advanced)
+- [0x00-html_advanced](https://github.com/monicajoa/holbertonschool-web_front_end/tree/master/0x00-html_advanced)
 - [0x01-developer_tools](https://github.com/monicajoa/holbertonschool-web_front_end/tree/master/0x01-developer_tools)
 - [0x02-CSS_advanced](https://github.com/monicajoa/holbertonschool-web_front_end/tree/master/0x02-CSS_advanced)
 - [0x03-sass_scss](https://github.com/monicajoa/holbertonschool-web_front_end/tree/master/0x03-sass_scss)
